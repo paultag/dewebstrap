@@ -8,13 +8,26 @@ html, body {
     font-family:                  @font-stack;
 }
 
+h1 {
+    font-size:                    1.8em;
+}
+
+h2 {
+    font-size:                    1.3em;
+}
+
+h3 {
+    font-size:                    1.1em;
+}
+
 .heading {
     background-color:             @heading-background;
     color:                        @heading-text-color;
     min-height:                   @heading-size;
 }
 
-.box-shadow(@style, @c) {
+.box-shadow(@style, @pct) {
+    @c:                 rgba(0, 0, 0, @pct);
     box-shadow:         @style @c;
     -webkit-box-shadow: @style @c;
     -moz-box-shadow:    @style @c;
@@ -37,6 +50,16 @@ html, body {
     float:                        left;
 }
 
+.slug {
+    float:                        left;
+    height:                       @logo-height;
+    line-height:                  @logo-height;
+    vertical-align:               middle;
+    margin-left:                  30px;
+    text-transform:               uppercase;
+    font-weight:                  bold;
+}
+
 .nav {
     height:                       @logo-height;
     line-height:                  @logo-height;
@@ -56,7 +79,7 @@ html, body {
             display:              inline;
             padding-left:         @nav-item-padding;
             a {
-                color:            @heading-text-color;
+                color:            @nav-link-color;
                 text-decoration:  none;
             }
             a:hover {
@@ -67,6 +90,25 @@ html, body {
             }
         }
     }
+}
+
+.main {
+    font-size:                    @main-font-size;
+    min-height:                   @main-min-height;
+    background-color:             @main-background;
+    .box-shadow(0 0 15px, 20%);
+    h1 {
+        text-transform:           uppercase;
+        width:                    100%;
+        text-align:               right;
+    }
+}
+
+footer {
+    margin-top:                   10px;
+    font-size:                    0.7em;
+    color:                        darken(@background, 40%);
+    margin-bottom:                40px;
 }
 
 .clear {
