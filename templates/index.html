@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="css/dewebstrap.css"/>
-        <title>Hello, World</title>
-    </head>
-    <body>
-        <div class = 'heading' >
-            <div class = 'pad content' >
-                <div class = 'logo' >
-                    <img
-                        id = 'logo'
-                        src = 'imgs/debian-white.svg'
-                        alt = '' />
-                </div>
-                <div class = 'slug' >
-                    Mcsweeney's synth fixie
-                </div>
-                <div class = 'nav' >
-                    <ul>
-                        <li><a href = 'http://debian.org/' >artisan</a></li>
-                        <li><a href = 'http://debian.org/' >cardigan</a></li>
-                        <li><a href = 'http://debian.org/' >fanny pack</a></li>
-                    </ul>
-                </div>
-                <div class = 'clear' ></div>
-            </div>
-        </div>
-        <div class = 'content' >
-            <div class = 'main pad' >
+{% extends "base.html" %}
+
+{% block title %}Hello, World{% endblock %}
+{% block slug %}
+Foo
+{% endblock %}
+{% block nav %}{% endblock %}
+{% block main %}
                 <h1>Dolore sed non bicycle rights</h1>
                 <h2>Sed sunt thundercats ad</h2>
                 Viral mlkshk blog accusamus biodiesel small batch iphone, marfa
@@ -63,12 +41,4 @@ art.accusamus();</pre>
                 farm-to-table, irure et mustache delectus duis. Polaroid ethnic
                 fap whatever. Consectetur bespoke blog, gastropub nulla
                 gluten-free placeat mixtape.
-            </div>
-        </div>
-        <div class = 'content' >
-            <footer>
-            Copyright (c) Foo
-            </footer>
-        </div>
-    </body>
-</html>
+{% endblock %}

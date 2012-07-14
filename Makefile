@@ -9,9 +9,10 @@ clean:
 	rm -rf dist
 
 build: clean
-	mkdir dist
-	mkdir dist/css
-	$(CSSC) $(CSFLAGS) less/dewebstrap.less > dist/css/dewebstrap.css
-	cp html/index.html dist
-	mkdir dist/imgs
-	cp imgs/* dist/imgs
+	mkdir dist -p
+	mkdir dist/static/css -p
+	mkdir dist/static/imgs -p
+	$(CSSC) $(CSFLAGS) less/dewebstrap.less > dist/static/css/dewebstrap.css
+	cp templates dist -r
+	cp imgs/* dist/static/imgs
+	cp code/app.py dist/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/dewebstrap.css') }}"/>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class = 'heading' >
+            <div class = 'pad content' >
+                <div class = 'logo' >
+                    <img
+                        id = 'logo'
+                        src = '{{ url_for('static', filename='imgs/debian-white.svg') }}'
+                        alt = '' />
+                </div>
+                <div class = 'slug' >
+{% block slug %}
+{% endblock %}
+                </div>
+                <div class = 'nav' >
+                    <ul>
+                        <li><a href = 'http://debian.org/' >artisan</a></li>
+                        <li><a href = 'http://debian.org/' >cardigan</a></li>
+                        <li><a href = 'http://debian.org/' >fanny pack</a></li>
+{% block nav %}
+{% endblock %}
+                    </ul>
+                </div>
+                <div class = 'clear' ></div>
+            </div>
+        </div>
+        <div class = 'content' >
+            <div class = 'main pad' >
+{% block main %}
+{% endblock %}
+            </div>
+        </div>
+        <div class = 'content' >
+            <footer>
+            {% block footer %}{% endblock %}
+            </footer>
+        </div>
+    </body>
+</html>
