@@ -26,15 +26,6 @@ h3 {
     min-height:                   @heading-size;
 }
 
-.box-shadow(@style, @pct) {
-    @c:                 rgba(0, 0, 0, @pct);
-    box-shadow:         @style @c;
-    -webkit-box-shadow: @style @c;
-    -moz-box-shadow:    @style @c;
-    // XXX: Remove vendor prefixes once we get good adoption of the
-    // root element.
-}
-
 .pad {
     padding:                      @padding;
 }
