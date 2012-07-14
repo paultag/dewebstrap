@@ -4,4 +4,71 @@
 html, body {
     padding:                      0px;
     margin:                       0px;
+    background-color:             @background;
+    font-family:                  @font-stack;
+}
+
+.heading {
+    background-color:             @heading-background;
+    color:                        @heading-text-color;
+    min-height:                   @heading-size;
+}
+
+.box-shadow(@style, @c) {
+    box-shadow:         @style @c;
+    -webkit-box-shadow: @style @c;
+    -moz-box-shadow:    @style @c;
+    // XXX: Remove vendor prefixes once we get good adoption of the
+    // root element.
+}
+
+.pad {
+    padding:                      @padding;
+}
+
+.content {
+    width:                        @content-width;
+    margin-left:                  auto;
+    margin-right:                 auto;
+}
+
+#logo {
+    height:                       @logo-height;
+    float:                        left;
+}
+
+.nav {
+    height:                       @logo-height;
+    line-height:                  @logo-height;
+    float:                        right;
+    vertical-align:               middle;
+    ul {
+        text-transform:           uppercase;
+        font-size:                @nav-item-font-size;
+        letter-spacing:           @nav-item-letter-spacing;
+        font-weight:              bold;
+        padding:                  0px;
+        margin:                   0px;
+        li {
+            padding:              0px;
+            margin:               0px;
+            list-style:           none;
+            display:              inline;
+            padding-left:         @nav-item-padding;
+            a {
+                color:            @heading-text-color;
+                text-decoration:  none;
+            }
+            a:hover {
+                color:            @nav-link-hover;
+            }
+            a:active {
+                color:            @nav-link-hover;
+            }
+        }
+    }
+}
+
+.clear {
+    clear:                        both;
 }

@@ -1,5 +1,29 @@
 // Copyright (c) Paul Tagliamonte <paultag@debian.org>, 2012 under the terms
 // and conditions of the Expat license
 
-@background:          #EEEEEE;
-@text-color:          #333333;
+@font-stack:          "URW Gothic L", sans-serif;
+
+@background:          #ECECEC;
+@text-color:          #3E3E3E;
+
+@heading-background:  @text-color;
+@heading-text-color:  @background;
+@heading-size:        120px;
+
+@content-width:       800px;
+
+@padding-top:         20;
+@padding-side:        70;
+@padding:             20px 70px; // Please keep these in sync. Less can't
+//                                   do things like @(size)px;, it has to be
+//                                   @size px, and @sizepx is invalid. Gah.
+
+
+// We need to set the size of the logo here.
+@logo-height:         (@heading-size - ( 2 * @padding-top ));
+
+@nav-item-padding:        15px;
+@nav-item-font-size:      1em;
+@nav-item-letter-spacing: .03em;
+
+@nav-link-hover:          #a7d660;

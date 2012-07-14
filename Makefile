@@ -10,4 +10,8 @@ clean:
 
 build: clean
 	mkdir dist
-	$(CSSC) $(CSFLAGS) less/dewebstrap.less > dist/dewebstrap.css
+	mkdir dist/css
+	$(CSSC) $(CSFLAGS) less/dewebstrap.less > dist/css/dewebstrap.css
+	cp html/index.html dist
+	mkdir dist/imgs
+	cp imgs/* dist/imgs
