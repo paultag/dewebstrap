@@ -6,3 +6,7 @@ HTML debianish website without any hassle.
 
 ![](http://i.imgur.com/iG9T6.png)
 
+license
+=======
+
+This project is under the expat license
