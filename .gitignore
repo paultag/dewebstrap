@@ -2,3 +2,5 @@ dist/
 *swp
 debian/dewebstrap
 debian/*log
+debian/*files
+debian/*substvars
