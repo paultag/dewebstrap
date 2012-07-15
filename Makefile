@@ -22,7 +22,7 @@ build: clean
 
 static: build
 	cd dist && ../helpers/static-build index.html > index.html
-	cd dist && ../helpers/static-build about.html > about.html
+	# cd dist && ../helpers/static-build about.html > about.html
 	rm -rf dist/templates
 
 flask: build
