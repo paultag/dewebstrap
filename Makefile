@@ -3,7 +3,10 @@
 CSSC = recess
 CSFLAGS = --compile --compress
 
-all: build
+all: lecture
+
+lecture:
+	@echo "make [static|flask|clean]"
 
 clean:
 	rm -rf dist
@@ -15,5 +18,11 @@ build: clean
 	$(CSSC) $(CSFLAGS) less/dewebstrap.less > dist/static/css/dewebstrap.css
 	cp templates dist -r
 	cp imgs/* dist/static/imgs
-	cp code/app.py dist/
 	./helpers/getcopyright > dist/templates/footer.html
+
+static: build
+	cd dist && ../helpers/static-build > index.html
+	rm -rf dist/templates
+
+flask: build
+	cp code/app.py dist/

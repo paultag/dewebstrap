@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+from jinja2 import Environment, FileSystemLoader
+
+import os.path
+import json
+
+env = Environment(loader=FileSystemLoader('templates'))
+template = env.get_template('index.html')
+
+def url_for(typ, **kwargs):
+    base = {
+        "static": "static",
+    }
+    if typ in base and "filename" in kwargs:
+        return "%s/%s" % ( base[typ], kwargs['filename'] )
+    else:
+        raise Exception("Crappy type: %s" % ( typ ))
+
+kwargs = {
+    "url_for": url_for
+}
+context = "context.json"
+
+if os.path.exists(context):
+    kwargs.update(json.load(open(context, 'r')))
+
+print template.render(**kwargs)
