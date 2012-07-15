@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# OK, let's first check for DEBFULLNAME
+
+if [ "x$DEBFULLNAME" != "x" ]; then
+    NAME=$DEBFULLNAME
+else
+    PASSWD_NAME=$(cat /etc/passwd | grep `whoami` | \
+        awk -F ":" '{ print $5}' | awk -F "," '{print $1}')
+
+    if [ "x$PASSWD_NAME" != "x" ]; then
+        NAME=$PASSWD_NAME
+    else
+        NAME=`whoami`
+    fi
+fi
+
+
+echo "Copyright (c) $NAME, `date "+%Y"`, all wrongs reserved."

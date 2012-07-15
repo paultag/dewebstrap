@@ -16,3 +16,4 @@ build: clean
 	cp templates dist -r
 	cp imgs/* dist/static/imgs
 	cp code/app.py dist/
+	./helpers/getcopyright > dist/templates/footer.html
