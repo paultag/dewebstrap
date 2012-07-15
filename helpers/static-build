@@ -4,9 +4,10 @@ from jinja2 import Environment, FileSystemLoader
 
 import os.path
 import json
+import sys
 
 env = Environment(loader=FileSystemLoader('templates'))
-template = env.get_template('index.html')
+template = env.get_template(sys.argv[1])
 
 def url_for(typ, **kwargs):
     base = {

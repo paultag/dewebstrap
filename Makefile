@@ -21,7 +21,8 @@ build: clean
 	./helpers/getcopyright > dist/templates/footer.html
 
 static: build
-	cd dist && ../helpers/static-build > index.html
+	cd dist && ../helpers/static-build index.html > index.html
+	cd dist && ../helpers/static-build about.html > about.html
 	rm -rf dist/templates
 
 flask: build
