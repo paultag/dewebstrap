@@ -8,7 +8,7 @@ Homepage: https://github.com/paultag/dewebstrap
 
 Package: dewebstrap
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, python, node-recess
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, node-less
 Description: creates a bootstrapped website root directory
  Output format can be either static HTML or a flask application.
  It features sane defaults build with less from source.

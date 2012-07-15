@@ -2,8 +2,11 @@
 # and conditions of the Expat license, a copy of which should be given to you
 # with the source of this application.
 
-CSSC ?= recess
-CSFLAGS ?= --compile --compress
+#CSSC ?= recess
+#CSFLAGS ?= --compile --compress
+
+CSSC ?= lessc
+CSFLAGS ?= -x
 
 DIST ?= dist
 
