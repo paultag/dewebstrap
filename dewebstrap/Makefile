@@ -25,8 +25,8 @@ build: clean
 	/usr/lib/dewebstrap/getcopyright > $(DIST)/templates/footer.html
 
 static: build
-	cd $(DIST) && /usr/lib/dewebstrap/helpers/static-build index.html > index.html
-	# cd $(DIST) && /usr/lib/dewebstrap/helpers/static-build about.html > about.html
+	cd $(DIST) && /usr/lib/dewebstrap/static-build index.html > index.html
+	# cd $(DIST) && /usr/lib/dewebstrap/static-build about.html > about.html
 	rm -rf $(DIST)/templates
 
 flask: build
