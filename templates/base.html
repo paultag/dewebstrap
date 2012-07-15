@@ -14,14 +14,12 @@
                         alt = '' />
                 </div>
                 <div class = 'slug' >
-{% block slug %}
-{% endblock %}
+{% include 'slug.html' %}
                 </div>
                 <div class = 'nav' >
                     <ul>
-                        <li><a href = 'http://debian.org/' >artisan</a></li>
-                        <li><a href = 'http://debian.org/' >cardigan</a></li>
-                        <li><a href = 'http://debian.org/' >fanny pack</a></li>
+                        <li><a href = '/' >Home</a></li>
+                        <li><a href = '/about' >About</a></li>
 {% block nav %}
 {% endblock %}
                     </ul>
