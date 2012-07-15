@@ -10,4 +10,4 @@ output=`pwd`/$2
 export DIST=$output
 
 cd /usr/share/dewebstrap/
-make $2
+make $1
