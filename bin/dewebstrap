@@ -1,3 +1,13 @@
 #!/bin/bash
 
+if [ "x$2" = "x" ]; then
+    echo "Usage:"
+    echo " dewebstrap [flask|static] path"
+    exit 1
+fi
 
+output=`pwd`/$2
+export DIST=$output
+
+cd /usr/share/dewebstrap/
+make $2

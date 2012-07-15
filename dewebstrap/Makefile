@@ -22,11 +22,11 @@ build: clean
 	$(CSSC) $(CSFLAGS) less/dewebstrap.less > $(DIST)/static/css/dewebstrap.css
 	cp templates $(DIST) -r
 	cp imgs/* $(DIST)/static/imgs
-	./helpers/getcopyright > $(DIST)/templates/footer.html
+	/usr/lib/dewebstrap/helpers/getcopyright > $(DIST)/templates/footer.html
 
 static: build
-	cd $(DIST) && ../helpers/static-build index.html > index.html
-	# cd $(DIST) && ../helpers/static-build about.html > about.html
+	cd $(DIST) && /usr/lib/dewebstrap/helpers/static-build index.html > index.html
+	# cd $(DIST) && /usr/lib/dewebstrap/helpers/static-build about.html > about.html
 	rm -rf $(DIST)/templates
 
 flask: build

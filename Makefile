@@ -15,3 +15,5 @@ install:
 	cp -r dewebstrap/* $(DESTDIR)/usr/share/dewebstrap/
 	mkdir -p $(DESTDIR)/usr/bin
 	cp -r bin/* $(DESTDIR)/usr/bin
+	mkdir -p $(DESTDIR)/usr/lib/dewebstrap/
+	cp -r lib/* $(DESTDIR)/usr/lib/dewebstrap
